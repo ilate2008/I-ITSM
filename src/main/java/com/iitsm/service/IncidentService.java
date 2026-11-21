@@ -69,6 +69,10 @@ public class IncidentService {
         repo.saveUser(u);
         return u;
     }
+     public List<User> listUsers(User actor) {
+        require(actor, Permission.MANAGE_USERS);
+        return repo.listUsers(null);
+    }
 
     private String nextUserId(Role role) {
         String prefix = switch (role) { case EMPLOYEE -> "E"; case TECHNICIAN -> "T"; case ADMIN -> "A"; };
