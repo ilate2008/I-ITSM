@@ -1,0 +1,3 @@
+package com.iitsm.model;
+
+public enum SlaFlag { RESPONSE_WARNING, RESPONSE_VIOLATED, RESOLUTION_WARNING, RESOLUTION_VIOLATED }

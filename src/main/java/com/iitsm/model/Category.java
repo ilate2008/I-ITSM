@@ -1,0 +1,3 @@
+package com.iitsm.model;
+
+public enum Category { HARDWARE, SOFTWARE, NETWORK, DATABASE, CLOUD, SECURITY, AUTHENTICATION, APPLICATION, STORAGE }
