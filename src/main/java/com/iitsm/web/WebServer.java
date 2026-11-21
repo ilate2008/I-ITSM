@@ -106,8 +106,7 @@ public class WebServer {
             case "audit": return (blank(id) ? svc.fullAudit(u) : svc.auditLog(u, id)).stream().map(this::audit).toList();
             case "notifications": return svc.notifications(u).stream().map(this::notification).toList();
             case "sla-check": return svc.checkSla(u).stream().map(a -> map("incident", a.incidentId(), "kind", a.kind())).toList();
-            case "users": return repo.listUsers(null).stream().map(x -> map("id", x.getId(), "name", x.getName(), "email", x.getEmail(), "role", x.role().name())).toList();
-            case "add-user": {
+            case "users": return svc.listUsers(u).stream().map(x -> map("id", x.getId(), "name", x.getName(), "email", x.getEmail(), "role", x.role().name())).toList();            case "add-user": {
                 Role r = Role.valueOf(p.get("role"));
                 TechnicianProfile prof = r == Role.TECHNICIAN ? TechnicianProfile.of(num(p, "years"), num(p, "maxLoad"), skills(p.get("skills"))) : null;
                 User n = svc.addUser(u, r, p.get("name"), p.get("email"), p.get("password"), prof);
