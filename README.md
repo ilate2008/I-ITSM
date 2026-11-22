@@ -172,7 +172,4 @@ Normal flow (t01, t02, t06), business rules (t03, t04, t05, t07, t34), authorisa
 exceptions (t15, t16, t22, t23), strategies (t18-t21), SLA and escalation (t24-t26), intelligence (t27-t29), search and reports (t30, t31),
 persistence (t32), notifications (t33), password hashing (t35).
 
-## Remaining items for submission
-Record the 15-20 min demo video (every member speaks; show the 3 workflows from `./run.sh demo` and the interactive app),
-export this README to the PDF report (add screenshots and your team's responsibilities), push to Git and share the link.
-Optional bonus: JavaFX GUI, REST API, JDBC repository.
+
